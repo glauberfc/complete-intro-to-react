@@ -1,5 +1,5 @@
-// flow-typed signature: 5fc543634c3834434d0d045b250b14b3
-// flow-typed version: cab04034e7/redux_v3.x.x/flow_>=v0.33.x <=v0.54.x
+// flow-typed signature: cca4916b0213065533df8335c3285a4a
+// flow-typed version: cab04034e7/redux_v3.x.x/flow_>=v0.55.x
 
 declare module 'redux' {
 
@@ -55,55 +55,5 @@ declare module 'redux' {
 
   declare export function combineReducers<O: Object, A>(reducers: O): CombinedReducer<$ObjMap<O, <S>(r: Reducer<S, any>) => S>, A>;
 
-  declare export function compose<A, B>(ab: (a: A) => B): (a: A) => B
-  declare export function compose<A, B, C>(
-    bc: (b: B) => C,
-    ab: (a: A) => B
-  ): (a: A) => C
-  declare export function compose<A, B, C, D>(
-    cd: (c: C) => D,
-    bc: (b: B) => C,
-    ab: (a: A) => B
-  ): (a: A) => D
-  declare export function compose<A, B, C, D, E>(
-    de: (d: D) => E,
-    cd: (c: C) => D,
-    bc: (b: B) => C,
-    ab: (a: A) => B
-  ): (a: A) => E
-  declare export function compose<A, B, C, D, E, F>(
-    ef: (e: E) => F,
-    de: (d: D) => E,
-    cd: (c: C) => D,
-    bc: (b: B) => C,
-    ab: (a: A) => B
-  ): (a: A) => F
-  declare export function compose<A, B, C, D, E, F, G>(
-    fg: (f: F) => G,
-    ef: (e: E) => F,
-    de: (d: D) => E,
-    cd: (c: C) => D,
-    bc: (b: B) => C,
-    ab: (a: A) => B
-  ): (a: A) => G
-  declare export function compose<A, B, C, D, E, F, G, H>(
-    gh: (g: G) => H,
-    fg: (f: F) => G,
-    ef: (e: E) => F,
-    de: (d: D) => E,
-    cd: (c: C) => D,
-    bc: (b: B) => C,
-    ab: (a: A) => B
-  ): (a: A) => H
-  declare export function compose<A, B, C, D, E, F, G, H, I>(
-    hi: (h: H) => I,
-    gh: (g: G) => H,
-    fg: (f: F) => G,
-    ef: (e: E) => F,
-    de: (d: D) => E,
-    cd: (c: C) => D,
-    bc: (b: B) => C,
-    ab: (a: A) => B
-  ): (a: A) => I
-
+  declare export var compose: $Compose;
 }
