@@ -1,16 +1,19 @@
 // @flow
 
 import React, { Component } from 'react'
-import { shows } from '../data.json'
 import ShowCard from './ShowCard'
 
 type State = {
   searchTerm: string
 }
 
-class Search extends Component<{}, State> {
+class Search extends Component<{ shows: Array<Show> }, State> {
   state = {
     searchTerm: ''
+  }
+
+  props: {
+    shows: Array<Show>
   }
 
   handleSearchTermChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
@@ -30,7 +33,7 @@ class Search extends Component<{}, State> {
           />
         </header>
         <div>
-          {shows
+          {this.props.shows
             .filter(
               show =>
                 `${show.title} ${show.description}`
