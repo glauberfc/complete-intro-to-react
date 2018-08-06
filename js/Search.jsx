@@ -1,4 +1,4 @@
-/* @flow */
+// @flow
 
 import React, { Component } from 'react'
 import { shows } from '../data.json'
@@ -13,9 +13,7 @@ class Search extends Component<{}, State> {
     searchTerm: ''
   }
 
-  handleSearchTermChange = (
-    event: SyntheticKeyboardEvent & { target: HTMLInputElement }
-  ) => {
+  handleSearchTermChange = (event: SyntheticInputEvent<HTMLInputElement>) => {
     this.setState({ searchTerm: event.target.value })
   }
 
