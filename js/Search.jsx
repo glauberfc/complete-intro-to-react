@@ -24,7 +24,11 @@ class Search extends Component<{ shows: Array<Show> }, State> {
   render() {
     return (
       <div className="search">
-        <Header showSearch />
+        <Header
+          showSearch
+          handleSearchTermChange={this.handleSearchTermChange}
+          searchTerm={this.state.searchTerm}
+        />
         <div>
           {this.props.shows
             .filter(
