@@ -38,7 +38,7 @@ class Details extends Component<{ show: Show }, { apiData: Object }> {
         <section>
           <h1>{title}</h1>
           <h2>({year})</h2>
-          <p>{ratingComponent}</p>
+          {ratingComponent}
           <img
             src={`/public/img/posters/${poster}`}
             alt={`Poster for ${title}`}
