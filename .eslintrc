@@ -9,6 +9,9 @@
     "flowtype",
     "prettier"
   ],
+  "rules": {
+    "react/prop-types": 0
+  },
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2016,
