@@ -12,9 +12,11 @@ export type Show = {
   description: string,
   poster: string,
   imdbID: string,
-  trailer: string
+  trailer: string,
+  rating?: string
 }
 
 export type setSearchTermAction = { type: 'SET_SEARCH_TERM', payload: string }
+export type addApiDataAction = { type: 'ADD_API_DATA', payload: Show }
 
 export type Action = setSearchTermAction
