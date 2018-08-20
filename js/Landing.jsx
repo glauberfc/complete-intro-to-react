@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import type { RouterHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import setSearchTerm from './actionCreators'
 
 type Props = {
@@ -27,14 +28,14 @@ class Landing extends Component<Props> {
             value={this.props.searchTerm}
             onChange={this.props.handleSearchTermChange}
           />
-          <a>or Browse All</a>
         </form>
+        <Link to="/search">or Browse All</Link>
       </div>
     )
   }
 }
 
-function mapStateToProps(state: Object) {
+function mapStateToProps(state: Object): Object {
   return { searchTerm: state.searchTerm }
 }
 
