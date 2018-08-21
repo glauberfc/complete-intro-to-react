@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addAPIData 1`] = `
+Object {
+  "payload": Object {
+    "description": "A television anthology series that shows the dark side of life and technology.",
+    "imdbID": "tt2085059",
+    "poster": "bm.jpg",
+    "rating": "2.4",
+    "title": "Black Mirror",
+    "trailer": "jDiYGjp5iFg",
+    "year": "2011–",
+  },
+  "type": "ADD_API_DATA",
+}
+`;
+
+exports[`setSearchTerm 1`] = `
+Object {
+  "payload": "New York",
+  "type": "SET_SEARCH_TERM",
+}
+`;
