@@ -1,7 +1,7 @@
 // @flow
 // Libraries
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import type { Match } from 'react-router-dom'
 import { Provider } from 'react-redux'
 // Components
@@ -14,7 +14,6 @@ import { shows } from '../data.json'
 import store from './store'
 
 const App = () => (
-  <BrowserRouter>
     <Provider store={store}>
       <div className="app">
         <Switch>
@@ -36,7 +35,6 @@ const App = () => (
         </Switch>
       </div>
     </Provider>
-  </BrowserRouter>
 )
 
 export default App

@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { render } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 import Perf from 'react-addons-perf'
 import App from './App'
 
@@ -13,7 +14,12 @@ const renderApp = element => {
     throw new Error('No app element')
   }
 
-  render(<App />, element)
+  render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    element
+  )
 }
 
 const appEl = document.getElementById('app')
